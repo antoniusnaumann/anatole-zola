@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" {% if config.extra.mode %} class="theme--{{config.extra.mode}}" {% else %} class="theme--light" {% endif
+<html lang="en" {% if config.extra.mode %} class="theme--{{config.extra.mode}}" {% else %} class="" {% endif
   %}>
 
 <head>
@@ -78,8 +78,9 @@
     </ul>
     <div class="footer">
       {% block footer %}
-      <span>Designed by </span><a href="https://www.caicai.me">CaiCai</a>
+      {%- if config.extra.watermark -%}
       <div class="by_zola"><a href="https://www.getzola.org/" target="_blank">Proudly published with Zola!</a></div>
+      {%- endif -%}
       {% endblock footer %}
     </div>
   </div>
@@ -140,11 +141,9 @@
       const currentTheme = localStorage.getItem('theme');
       const element = document.getElementsByTagName("html")[0];
       if (currentTheme) {
-        element.classList.remove('theme--light');
         element.classList.add('theme--' + currentTheme);
       } else {
         localStorage.setItem('theme', '{{config.extra.default_mode}}');
-        element.classList.remove('theme--light');
         element.classList.add('theme--{{config.extra.default_mode}}');
       }
     }

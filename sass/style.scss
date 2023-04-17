@@ -844,7 +844,7 @@ a.btn {
 
 /* color styles */
 /* light mode */
-html.theme--light {
+@mixin light {
   background-color: #fff;
 
   body {
@@ -1146,7 +1146,7 @@ html.theme--light {
 
 /* color styles */
 /* dark mode */
-html.theme--dark {
+@mixin dark {
   background-color: #152028;
 
   body {
@@ -1438,4 +1438,22 @@ html.theme--dark {
       }
     }
   }
+}
+
+html {
+  @include light
+}
+
+html.theme--dark {
+  @include dark
+} 
+
+@media (prefers-color-scheme: dark) {
+  html {
+    @include dark
+  }
+}
+
+html.theme--light {
+  @include light
 }
