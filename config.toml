@@ -12,22 +12,6 @@ taxonomies = [
     {name = "tags"},
 ]
 
-[languages.en]
-title = "Anatole"
-description = "A other zola theme"
-generate_feed = true
-taxonomies = [
-    {name = "tags"},
-]
-
-[languages.zh]
-title = "Anatole"
-description = "A other zola theme"
-generate_feed = true
-taxonomies = [
-    {name = "tags"},
-]
-
 [languages.en.translations]
 language_name = "English"
 about = "About"

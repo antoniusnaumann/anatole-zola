@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'PingHei', 'PingFang SC', Helvetica Neue, 'Work Sans', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+  font-family: system, Inter, Helvetica Neue, sans-serif;
   font-size: 15px;
   width: 100%;
   margin: 0 auto 30px auto;
@@ -120,12 +120,12 @@ img {
 .content {
   height: auto;
   float: right;
-  width: 60%;
+  width: 80%;
   margin-top: 60px;
 }
 
 .page-top {
-  width: 60%;
+  width: 80%;
   position: fixed;
   right: 0;
   z-index: 3;
@@ -264,7 +264,7 @@ img {
 }
 
 #sidebar {
-  width: 40%;
+  width: 20%;
   -webkit-background-size: cover;
   background-size: cover;
   height: 100%;
@@ -817,7 +817,7 @@ a.btn {
   }
 
   .content {
-    margin-top: 420px;
+    margin-top: 220px;
     width: 100%;
     z-index: 2;
     position: absolute;
